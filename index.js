@@ -11,9 +11,9 @@ const pageNumber = document.getElementById("page-number");
 
 dateHandler();
 let currentPage = 1;
-const itemsPerPage = 3; //limiting number of cards to display
+const itemsPerPage = 3;
 pagination.style.display = "none"; //to hide previous and next buttons
-// event listeners for the Buttons
+
 searchButton.addEventListener("click", () => {
   currentPage = 1;
   fetchResults(currentPage);
@@ -78,7 +78,7 @@ function displayResults(data, currentPage) {
         }
 
         card.appendChild(title);
-        //   card.appendChild(description);
+
         cardContainer.appendChild(card);
       }
       const totalResults = data.length;
